@@ -88,8 +88,16 @@
 //   return Math.random();
 // }
 
-function checkEqual(a, b) {
-  return a != b ? "Not Equal" : "Equal";
-}
+// function checkEqual(a, b) {
+//   return a != b ? "Not Equal" : "Equal";
+// }
 
-checkEqual(1, 2);
+// checkEqual(1, 2);
+
+function checkSign(num) {
+return num > 0 ? "positive" 
+: num < 0 ? "negative" 
+: "zero";
+
+}
+console.log(checkSign(10));
