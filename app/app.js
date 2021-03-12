@@ -88,10 +88,8 @@
 //   return Math.random();
 // }
 
-function convertToInteger(str) {
-  var c = parseInt(str, 2); ;
-  return c;
+function checkEqual(a, b) {
+  return a != b ? "Not Equal" : "Equal";
 }
 
-
-console.log(convertToInteger("10011"));
+checkEqual(1, 2);
