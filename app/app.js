@@ -89,8 +89,9 @@
 // }
 
 function convertToInteger(str) {
-  var c = parseInt(str);
+  var c = parseInt(str, 2); ;
   return c;
 }
 
-console.log(convertToInteger("56"));
+
+console.log(convertToInteger("10011"));
