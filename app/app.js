@@ -82,8 +82,15 @@
 // }
 
 // console.log(lookUpProfile("Akira", "likes"));
-function randomWholeNum() {
-  Math.floor(Math.random()*9)
+// function randomWholeNum() {
+//   Math.floor(Math.random()*9)
 
-  return Math.random();
+//   return Math.random();
+// }
+
+function convertToInteger(str) {
+  var c = parseInt(str);
+  return c;
 }
+
+console.log(convertToInteger("56"));
