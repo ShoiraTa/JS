@@ -94,10 +94,21 @@
 
 // checkEqual(1, 2);
 
-function checkSign(num) {
-return num > 0 ? "positive" 
-: num < 0 ? "negative" 
-: "zero";
+// function checkSign(num) {
+// return num > 0 ? "positive" 
+// : num < 0 ? "negative" 
+// : "zero";
 
+// }
+// console.log(checkSign(10));
+
+function repeatStringNumTimes (str, num) {
+  var rString= "h";
+  while (num>0){
+      rString+= str 
+      num--
+  }
+  return rString
 }
-console.log(checkSign(10));
+
+console.log(repeatStringNumTimes("*", 8))
