@@ -100,15 +100,69 @@
 // : "zero";
 
 // }
-// console.log(checkSign(10));
+// // console.log(checkSign(10));
 
-function repeatStringNumTimes (str, num) {
-  var rString= "h";
-  while (num>0){
-      rString+= str 
-      num--
+// function repeatStringNumTimes (str, num) {
+//   var rString= "h";
+//   while (num>0){
+//       rString+= str 
+//       num--
+//   }
+//   return rString
+// }
+
+// console.log(repeatStringNumTimes("*", 8))
+
+// function anagram (str1, str2) {
+//   var a = str1.toLowerCase().replace(/\W/g, "").split("").sort().join();
+//   var b = str2.toLowerCase().replace(/\W/g, "").split("").sort().join();
+//   if (a === b ) return true;
+//   else return false;
+// };
+
+// console.log(anagram("friend", "findr"));
+// Recursion
+// function rec (n){
+//   if (n ==0 ){
+//     return []
+//   }
+//   else{
+//     let arr = rec(n-1)
+//     arr.push(n)
+//     return arr.sort(function(a, b){return b-a});
+//   }
+// }
+// console.log(rec(6))
+
+// function range(a, b){
+//   if (b<a){
+//     return []
+//   }
+//   else {
+//     var arr = range(a,b -1);
+//     arr.push(b);
+//     return arr
+//   }
+// }
+
+function p (str){
+  let str1 = str.toLowerCase().replace(/[\W_]/g, "").split("");
+  let arr1 = [];
+  
+  for (let i = 0; i<str1.length; i++){
+   arr1.push(str1[i]);
+   }
+
+  let arr2 = [].concat(arr1).reverse(-1).join();
+   arr1 = arr1.join();
+
+  console.log(arr2);
+  console.log(arr1);
+  if (arr1 == arr2) {
+    return true;
+  } else {
+    return false;
   }
-  return rString
-}
 
-console.log(repeatStringNumTimes("*", 8))
+}
+console.log(p("race car"));
