@@ -123,13 +123,13 @@
 // console.log(anagram("friend", "findr"));
 // Recursion
 function rec (n){
-  if (n==0){
-    return[]
+  if (n ==0 ){
+    return []
   }
   else{
-    let  val =rec(n-1)
-    val.push(n)
-    return val
+    let arr = rec(n-1)
+    arr.push(n)
+    return arr.sort().reverse();
   }
 }
-console.log(rec(5));
+console.log(rec(6))
