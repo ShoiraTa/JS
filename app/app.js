@@ -113,11 +113,23 @@
 
 // console.log(repeatStringNumTimes("*", 8))
 
-function anagram (str1, str2) {
-  var a = str1.toLowerCase().replace(/\W/g, "").split("").sort().join();
-  var b = str2.toLowerCase().replace(/\W/g, "").split("").sort().join();
-  if (a === b ) return true;
-  else return false;
-};
+// function anagram (str1, str2) {
+//   var a = str1.toLowerCase().replace(/\W/g, "").split("").sort().join();
+//   var b = str2.toLowerCase().replace(/\W/g, "").split("").sort().join();
+//   if (a === b ) return true;
+//   else return false;
+// };
 
-console.log(anagram("friend", "findr"));
+// console.log(anagram("friend", "findr"));
+// Recursion
+function rec (n){
+  if (n==0){
+    return[]
+  }
+  else{
+    let  val =rec(n-1)
+    val.push(n)
+    return val
+  }
+}
+console.log(rec(5));
