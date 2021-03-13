@@ -122,14 +122,27 @@
 
 // console.log(anagram("friend", "findr"));
 // Recursion
-function rec (n){
-  if (n ==0 ){
+// function rec (n){
+//   if (n ==0 ){
+//     return []
+//   }
+//   else{
+//     let arr = rec(n-1)
+//     arr.push(n)
+//     return arr.sort(function(a, b){return b-a});
+//   }
+// }
+// console.log(rec(6))
+
+function rangeOfNumbers(startNum, endNum) {
+  if(endNum<startNum){
     return []
   }
-  else{
-    let arr = rec(n-1)
-    arr.push(n)
-    return arr.sort().reverse();
+  else {
+    let arr = rangeOfNumbers(startNum, endNum  - 1);
+    arr.push(endNum);
+    return arr;
   }
-}
-console.log(rec(6))
+  
+};
+console.log(rangeOfNumbers(6, 10));
