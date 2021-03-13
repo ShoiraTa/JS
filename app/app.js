@@ -146,7 +146,7 @@
 // }
 
 function p (str){
-  let str1 = str.toLowerCase().replace(/\W/g, "").split("");
+  let str1 = str.toLowerCase().replace(/[\W_]/g, "").split("");
   let arr1 = [];
   
   for (let i = 0; i<str1.length; i++){
@@ -165,4 +165,4 @@ function p (str){
   }
 
 }
-console.log (p("mam"))
+console.log(p("race car"));
