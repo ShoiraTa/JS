@@ -134,15 +134,35 @@
 // }
 // console.log(rec(6))
 
-function rangeOfNumbers(startNum, endNum) {
-  if(endNum<startNum){
-    return []
-  }
-  else {
-    let arr = rangeOfNumbers(startNum, endNum  - 1);
-    arr.push(endNum);
-    return arr;
-  }
+// function range(a, b){
+//   if (b<a){
+//     return []
+//   }
+//   else {
+//     var arr = range(a,b -1);
+//     arr.push(b);
+//     return arr
+//   }
+// }
+
+function p (str){
+  let str1 = str.toLowerCase().replace(/\W/g, "").split("");
+  let arr1 = [];
   
-};
-console.log(rangeOfNumbers(6, 10));
+  for (let i = 0; i<str1.length; i++){
+   arr1.push(str1[i]);
+   }
+
+  let arr2 = [].concat(arr1).reverse(-1).join();
+   arr1 = arr1.join();
+
+  console.log(arr2);
+  console.log(arr1);
+  if (arr1 == arr2) {
+    return true;
+  } else {
+    return false;
+  }
+
+}
+console.log (p("mam"))
