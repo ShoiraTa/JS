@@ -205,9 +205,18 @@ let ourRegex = /Rep/gi;
 console.log(testStr.match(ourRegex)) */;
 
 // The wildcard character . will match any one character. The wildcard is also called dot and period. You can use the wildcard character just like any other character in the regex. For example, if you wanted to match hug, huh, hut, and hum, you can use the regex /hu./ to match all four words./////////////////////////////////////////////////////////////////////
+//you want to match bag, big, and bug but not bog. You can create the regex /b[aiu]g/ to do this. The [aiu] is the character class that will only match the characters a, i, or u.
+// to match lowercase letters a through e you would use [a-e]/////////////////////////////////
 
-function wildcardSerch(str){
-  let a = /he./gi;
+/* function wildcardSerch(str){
+  let a = /h[ibcd]e./gi;
   return a.test(a)
 }
-console.log(wildcardSerch("hey"));//true
+console.log(wildcardSerch("hey"));//true */
+
+// Example //////////////////////////////////////////////////////////////////////////////////
+
+let sample = "is the 1chato 2ma4tch lowercase lettersfa 4 through678 e you would use";
+let matching= /[a-z0-6]/gi;
+let result =sample.match(matching)
+console.log(result)
