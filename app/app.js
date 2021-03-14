@@ -1,4 +1,4 @@
-//DO WHILE///////////////////////////
+//DO WHILE/////////////////////////////////////////////////////////
 /* var myArray = [];
 var i = 10;
 do{
@@ -9,7 +9,7 @@ while (i < 5)
 console.log(myArray);
  */
 
-// array search hasOwnProperty //////////////////////////
+// array search hasOwnProperty /////////////////////////////////////
 /* var contacts = [
   {
     firstName: "Akira",
@@ -50,42 +50,43 @@ function lookUpProfile(name, prop) {
      }
   }
   return "No such contact";
-
+ console.log(lookUpProfile("Akira", "likes"));
 } */
 
-// console.log(lookUpProfile("Akira", "likes"));
-// function randomWholeNum() {
-//   Math.floor(Math.random()*9)
+// Math.random() //////////////////////////////////////////////////
+/* function randomWholeNum() {
+  Math.floor(Math.random()*9)
+  return Math.random();
+}
+ */
 
-//   return Math.random();
-// }
+//  Function Expression ///////////////////////////////////////////
+/* function checkEqual(a, b) {
+  return a != b ? "Not Equal" : "Equal";
+}
+checkEqual(1, 2); */
 
-// function checkEqual(a, b) {
-//   return a != b ? "Not Equal" : "Equal";
-// }
+//  Function Expression ///////////////////////////////////////////
+/* function checkSign(num) {
+return num > 0 ? "positive"
+: num < 0 ? "negative"
+: "zero";
+}
+console.log(checkSign(10));
+ */
 
-// checkEqual(1, 2);
+// while, repeat str ////////////////////////////////////////////////
+/* function repeatStringNumTimes (str, num) {
+  var rString= "h";
+  while (num>0){
+      rString+= str
+      num--
+  }
+  return rString
+}
+console.log(repeatStringNumTimes("*", 8)) */
 
-// function checkSign(num) {
-// return num > 0 ? "positive"
-// : num < 0 ? "negative"
-// : "zero";
-
-// }
-// // console.log(checkSign(10));
-
-// function repeatStringNumTimes (str, num) {
-//   var rString= "h";
-//   while (num>0){
-//       rString+= str
-//       num--
-//   }
-//   return rString
-// }
-
-// console.log(repeatStringNumTimes("*", 8))
-
-//  Anagram chelenge//////////////////////////////////////
+//  Anagram chelenge////////////////////////////////////////////////////
 /* function anagram (str1, str2) {
   var a = str1.toLowerCase().replace(/\W/g, "").split("").sort().join();
   var b = str2.toLowerCase().replace(/\W/g, "").split("").sort().join();
@@ -93,8 +94,8 @@ function lookUpProfile(name, prop) {
   else return false;
 }; 
  console.log(anagram("friend", "findr"));*/
- // RECURSION///////////////////////////
 
+ // RECURSION/////////////////////////////////////////////
 /* function rec(val){
      result = val
      if(val ==0 || val ==1){
@@ -108,7 +109,7 @@ function lookUpProfile(name, prop) {
 }
 console.log (rec(5)) */
 
-// RECURSION///////////////////////////
+// RECURSION/////////////////////////////////////////////
 /* function sum(arr, n) {
   if(n <=0){
        return 0
@@ -119,7 +120,7 @@ console.log (rec(5)) */
 }
 console.log(sum([2, 3, 4, 5], 3)); */
 
-// Recursion//////////////////////////////////////
+// Recursion/////////////////////////////////////////////////
 
 /*function rec (n){
   if (n ==0 ){
@@ -133,7 +134,7 @@ console.log(sum([2, 3, 4, 5], 3)); */
 }
 console.log(rec(6)) */
 
-// Recursion//////////////////////////////////////
+// Recursion//////////////////////////////////////////////////
 /* function range(a, b){
   if (b<a){
     return []
@@ -145,7 +146,7 @@ console.log(rec(6)) */
   }
 } */
 
-// Palindrome challenge///////////////////////////
+// Palindrome challenge//////////////////////////////////////////
 /* function p (str){
   let str1 = str.toLowerCase().replace(/[\W_]/g, "").split("");
   let arr1 = [];
@@ -165,22 +166,30 @@ console.log(rec(6)) */
 }
 console.log(p("race car")); */
 
-// Test()///////////////////////////////////////////
+// Test()////////////////////////////////////////////////////
 
 /* let myString = "Hello, World!";
 let myRegex = /Hello/;
 let result = myRegex.test(myString); */
 
-// test() alternative //////////////////////////////
+// test() alternative ////////////////////////////////////////
 /* function testf(str){
   let result = /yes|no/
   return result.test(str)}
 console.log(testf("gom  papa")) */
 
-// test() ignore cases /////////////////////////////
+// test() ignore cases /////////////////////////////////////
 /* function ignoreCamelCase(str){
   let result = /camel/i;
   return result.test(str);
 }
 console.log(testf("CAMEL"));//true
  */
+
+//  Match()/////////////////////////////////////////////////
+function matching(){
+let a = "hello";
+let b = /ello/;
+return a.match(b);
+}
+console.log(matching());
