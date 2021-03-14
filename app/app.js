@@ -227,8 +227,12 @@ let result =sample.match(matching)
 console.log(result)  */
 
 // find in the begnning (^)
-let rickyAndCal = "Cal and Ricky both like racing.";
+/* let rickyAndCal = "Cal and Ricky both like racing.";
 let calRegex = /^Cal/; // Change this line
-let result = calRegex.test(rickyAndCal);
+let result = calRegex.test(rickyAndCal); */
 
+// Find at he end of str ($)
+let caboose = "The last car on a train is the caboose";
+let lastRegex = /$caboose/; // Change this line
+let result = lastRegex.test(caboose);
  
