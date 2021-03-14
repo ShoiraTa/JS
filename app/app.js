@@ -220,11 +220,15 @@ let matching= /[a-z0-6]/gi;
 let result =sample.match(matching)
 console.log(result) */
 
-// avoid characters in search ^
-
-let sample = "is the 1chato 2ma4tch lowercase lettersfa 4 through678 e you would use";
+// avoid characters in search ([^])
+/* let sample = "is the 1chato 2ma4tch lowercase lettersfa 4 through678 e you would use";
 let matching= /[^`@#$][a-z0-6]/gi;
 let result =sample.match(matching)
-console.log(result) 
+console.log(result)  */
+
+// find in the begnning (^)
+let rickyAndCal = "Cal and Ricky both like racing.";
+let calRegex = /^Cal/; // Change this line
+let result = calRegex.test(rickyAndCal);
 
  
