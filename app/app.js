@@ -232,7 +232,12 @@ let calRegex = /^Cal/; // Change this line
 let result = calRegex.test(rickyAndCal); */
 
 // Find at he end of str ($)
-let caboose = "The last car on a train is the caboose";
-let lastRegex = /$caboose/; // Change this line
-let result = lastRegex.test(caboose);
- 
+/* let caboose = "The last car on a train is the caboose";
+let lastRegex = /caboose$/; // Change this line
+let result = lastRegex.test(caboose); */
+
+// \w - this shortcut is equal to [A-Za-z0-9_]
+//  \W.  This shortcut is the same as [^A-Za-z0-9_] Note, the opposite pattern uses a capital letter.
+let quoteSample = "The five boxing wizards jump quickly.";
+let nonAlphabetRegex = /\W/g; // Change this line
+let result = quoteSample.match(nonAlphabetRegex).length;
