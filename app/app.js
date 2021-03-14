@@ -168,11 +168,15 @@
 // console.log(p("race car"));
 
 // var vs let 
-let catName;
-let quote;
-function catTalk() {
-  "use strict";
-  catName = "Oliver";
-  quote = catName + " says Meow!";
-}
-catTalk();
+// let catName;
+// let quote;
+// function catTalk() {
+//   "use strict";
+//   catName = "Oliver";
+//   quote = catName + " says Meow!";
+// }
+// catTalk();
+
+let myString = "Hello, World!";
+let myRegex = /Hello/;
+let result = myRegex.test(myString); // Change this line
