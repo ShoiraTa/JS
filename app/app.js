@@ -200,7 +200,14 @@ let ourRegex = /Rep/g;
 console.log(testStr.match(ourRegex)); */
 
 //  Match() reapeat g and i flag/////////////////////////////////////////////////
-
-let testStr = "Repeat, Repeat, Repeat";
+/* let testStr = "Repeat, Repeat, Repeat";
 let ourRegex = /Rep/gi;
-console.log(testStr.match(ourRegex));
+console.log(testStr.match(ourRegex)) */;
+
+// The wildcard character . will match any one character. The wildcard is also called dot and period. You can use the wildcard character just like any other character in the regex. For example, if you wanted to match hug, huh, hut, and hum, you can use the regex /hu./ to match all four words./////////////////////////////////////////////////////////////////////
+
+function wildcardSerch(str){
+  let a = /he./gi;
+  return a.test(a)
+}
+console.log(wildcardSerch("hey"));//true
