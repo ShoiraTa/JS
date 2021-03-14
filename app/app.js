@@ -214,9 +214,17 @@ console.log(testStr.match(ourRegex)) */;
 }
 console.log(wildcardSerch("hey"));//true */
 
-// Example //////////////////////////////////////////////////////////////////////////////////
-
-let sample = "is the 1chato 2ma4tch lowercase lettersfa 4 through678 e you would use";
+// Example search from a to z from 0 to 6//////////////////////////////////////////////////////////////////////////////////
+/* let sample = "is the 1chato 2ma4tch lowercase lettersfa 4 through678 e you would use";
 let matching= /[a-z0-6]/gi;
 let result =sample.match(matching)
-console.log(result)
+console.log(result) */
+
+// avoid characters in search ^
+
+let sample = "is the 1chato 2ma4tch lowercase lettersfa 4 through678 e you would use";
+let matching= /[^`@#$][a-z0-6]/gi;
+let result =sample.match(matching)
+console.log(result) 
+
+ 
