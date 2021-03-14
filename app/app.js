@@ -187,9 +187,20 @@ console.log(testf("CAMEL"));//true
  */
 
 //  Match()/////////////////////////////////////////////////
-function matching(){
+/* function matching(){
 let a = "hello";
 let b = /ello/;
 return a.match(b);
 }
-console.log(matching());
+console.log(matching()); */
+
+//  Match() reapeat g flag/////////////////////////////////////////////////
+/* let testStr = "Repeat, Repeat, Repeat";
+let ourRegex = /Rep/g;
+console.log(testStr.match(ourRegex)); */
+
+//  Match() reapeat g and i flag/////////////////////////////////////////////////
+
+let testStr = "Repeat, Repeat, Repeat";
+let ourRegex = /Rep/gi;
+console.log(testStr.match(ourRegex));
