@@ -22,7 +22,7 @@
 //      return result
 // }
 
-// console.log (rec(5))               
+// console.log (rec(5))
 
 // Write a recursive function, sum(arr, n), that returns the sum of the first n elements of an array arr.
 
@@ -67,9 +67,9 @@
 
 // function lookUpProfile(name, prop) {
 //      for(var i =0; i<contacts.length; i++){
-       
+
 //      if (contacts[i].firstName === name) {
-      
+
 //        if (contacts[i].hasOwnProperty(prop)) {
 //          return contacts[i][prop];
 //        } else {
@@ -77,7 +77,7 @@
 //        }
 //      }
 //   }
-//   return "No such contact";   
+//   return "No such contact";
 
 // }
 
@@ -95,8 +95,8 @@
 // checkEqual(1, 2);
 
 // function checkSign(num) {
-// return num > 0 ? "positive" 
-// : num < 0 ? "negative" 
+// return num > 0 ? "positive"
+// : num < 0 ? "negative"
 // : "zero";
 
 // }
@@ -105,7 +105,7 @@
 // function repeatStringNumTimes (str, num) {
 //   var rString= "h";
 //   while (num>0){
-//       rString+= str 
+//       rString+= str
 //       num--
 //   }
 //   return rString
@@ -148,11 +148,9 @@
 // function p (str){
 //   let str1 = str.toLowerCase().replace(/[\W_]/g, "").split("");
 //   let arr1 = [];
-  
 //   for (let i = 0; i<str1.length; i++){
 //    arr1.push(str1[i]);
 //    }
-
 //   let arr2 = [].concat(arr1).reverse(-1).join();
 //    arr1 = arr1.join();
 
@@ -163,11 +161,10 @@
 //   } else {
 //     return false;
 //   }
-
 // }
 // console.log(p("race car"));
 
-// var vs let 
+// var vs let
 // let catName;
 // let quote;
 // function catTalk() {
@@ -177,6 +174,14 @@
 // }
 // catTalk();
 
-let myString = "Hello, World!";
-let myRegex = /Hello/;
-let result = myRegex.test(myString); // Change this line
+// let myString = "Hello, World!";
+// let myRegex = /Hello/;
+// let result = myRegex.test(myString);
+
+// test() alternative
+
+function testf(str){
+  let result = /yes|no/
+  return result.test(str)
+}
+console.log(testf("gom  papa"))
