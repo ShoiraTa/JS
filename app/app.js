@@ -145,24 +145,34 @@
 //   }
 // }
 
-function p (str){
-  let str1 = str.toLowerCase().replace(/[\W_]/g, "").split("");
-  let arr1 = [];
+// function p (str){
+//   let str1 = str.toLowerCase().replace(/[\W_]/g, "").split("");
+//   let arr1 = [];
   
-  for (let i = 0; i<str1.length; i++){
-   arr1.push(str1[i]);
-   }
+//   for (let i = 0; i<str1.length; i++){
+//    arr1.push(str1[i]);
+//    }
 
-  let arr2 = [].concat(arr1).reverse(-1).join();
-   arr1 = arr1.join();
+//   let arr2 = [].concat(arr1).reverse(-1).join();
+//    arr1 = arr1.join();
 
-  console.log(arr2);
-  console.log(arr1);
-  if (arr1 == arr2) {
-    return true;
-  } else {
-    return false;
-  }
+//   console.log(arr2);
+//   console.log(arr1);
+//   if (arr1 == arr2) {
+//     return true;
+//   } else {
+//     return false;
+//   }
 
+// }
+// console.log(p("race car"));
+
+// var vs let 
+let catName;
+let quote;
+function catTalk() {
+  "use strict";
+  catName = "Oliver";
+  quote = catName + " says Meow!";
 }
-console.log(p("race car"));
+catTalk();
