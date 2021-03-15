@@ -255,6 +255,8 @@ let result = sample.match(countWhiteSpace); */
 // {.,.} match a certain range of patterns  
 // {2,} match 2 or more
 // ?  checks for zero or one  element
+// (?=...) pattern that you want  want to be there
+// (?!...) pattern that you do not want to be there
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!// /1. ^ - start of input
 // 2. [a-z] - first character is a letter
@@ -280,7 +282,19 @@ let result = ohRegex.test(ohStr);
 console.log(result); */
 
 // ?
-let favWord = "favourite";
+/* let favWord = "favourite";
 let favRegex = /favou?rite/gi; // Change this line
 let result = favRegex.test(favWord);
-console.log(result);
+ */
+
+//  looks for at least 3 letters  and at least one number
+/*  let password ="gfjskdmk"
+ let check = /(?=[a-z]{3,})(?=\D*\d)/
+ let correct = check.test(password);
+ console.log(correct) */
+
+//  greater than 5 characters long, and have two consecutive digits.
+/*  let sampleWord = "bana12";
+ let pwRegex = /(?=\w{6})(?=\w*\d{2})/; // Change this line
+ let result = pwRegex.test(sampleWord);
+ console.log(result); */
