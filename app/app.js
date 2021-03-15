@@ -246,11 +246,9 @@ let result = lastRegex.test(caboose); */
 // \W. is= [^A-Za-z0-9_] Note, a capital letter.
 // \d find digits find numbers
 // \D find non-digits find numbers =[^0-9]
+// \s matches whitespace, tab, form feed, and new line characters.
 
-let username = "c57bT3";
-let userCheck = /^[a-z][a-z]+\d*$|^[a-z]\d\d+$/gi; // Change this line
-let result = userCheck.test(username);
-console.log (result)
+
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!// /1. ^ - start of input
 // 2. [a-z] - first character is a letter
 // 3. [a-z]+ -has one or more letters next
@@ -263,6 +261,12 @@ console.log (result)
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!/
 
 
-let movieName = "2001: A Space Odyssey";
-let noNumRegex = /\D/g; // Change this line
-let result = movieName.match(noNumRegex).length;  
+/* let username = "c57bT3";
+let userCheck = /^[a-z][a-z]+\d*$|^[a-z]\d\d+$/gi; // Change this line
+let result = userCheck.test(username);
+console.log (result) */
+
+// \s matches whitespace, tab, form feed, and new line characters.
+let sample = "Whitespace is important in separating words";
+let countWhiteSpace = /\s/g; // Change this line
+let result = sample.match(countWhiteSpace);
