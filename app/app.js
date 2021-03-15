@@ -194,10 +194,6 @@ return a.match(b);
 }
 console.log(matching()); */
 
-//  Match() reapeat g flag/////////////////////////////////////////////////
-/* let testStr = "Repeat, Repeat, Repeat";
-let ourRegex = /Rep/g;
-console.log(testStr.match(ourRegex)); */
 
 //  Match() reapeat g and i flag/////////////////////////////////////////////////
 /* let testStr = "Repeat, Repeat, Repeat";
@@ -236,8 +232,37 @@ let result = calRegex.test(rickyAndCal); */
 let lastRegex = /caboose$/; // Change this line
 let result = lastRegex.test(caboose); */
 
-// \w - this shortcut is equal to [A-Za-z0-9_]
-//  \W.  This shortcut is the same as [^A-Za-z0-9_] Note, the opposite pattern uses a capital letter.
-let quoteSample = "The five boxing wizards jump quickly.";
-let nonAlphabetRegex = /\W/g; // Change this line
-let result = quoteSample.match(nonAlphabetRegex).length;
+
+// *
+// . match any one character /hu./ (hug, huh, hun all true)
+// + find group of characters that appears one or more times in a row
+// | Or
+// /g[oeu]n/  find multiple possabilities of str
+// [a-z0-6] from to
+// ([^]) avoid characters in search 
+// (^) find in the begnning
+// ($) - Find at the end of str
+// \w - find [A-Za-z0-9_]
+// \W. is= [^A-Za-z0-9_] Note, a capital letter.
+// \d find digits find numbers
+// \D find non-digits find numbers =[^0-9]
+
+let username = "c57bT3";
+let userCheck = /^[a-z][a-z]+\d*$|^[a-z]\d\d+$/gi; // Change this line
+let result = userCheck.test(username);
+console.log (result)
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!// /1. ^ - start of input
+// 2. [a-z] - first character is a letter
+// 3. [a-z]+ -has one or more letters next
+// 4. \d*$ -  ends with 0 or more numbers
+// 5. | - or
+// 6. ^[a-z] - first character is a letter
+// 7. \d\d+ - following characters are 2 or more digits
+// 8. $ - end of input
+// 9. [0-9]{2,0} - ends with two or more numbers
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!/
+
+
+let movieName = "2001: A Space Odyssey";
+let noNumRegex = /\D/g; // Change this line
+let result = movieName.match(noNumRegex).length;  
