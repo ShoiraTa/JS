@@ -253,6 +253,8 @@ let result = sample.match(countWhiteSpace); */
 // \d  numbers
 // \D  non-digits  =[^0-9]
 // {.,.} match a certain range of patterns  
+// {2,} match 2 or more
+// ?  checks for zero or one  element
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!// /1. ^ - start of input
 // 2. [a-z] - first character is a letter
@@ -272,7 +274,13 @@ let result = userCheck.test(username);
 console.log (result) */
 
 // {3,6} match a certain range of patterns  
-let ohStr = "Ohhh no";
+/* let ohStr = "Ohhh no";
 let ohRegex = /Oh{3,6}\sno/gi; // Change this line
 let result = ohRegex.test(ohStr);
+console.log(result); */
+
+// ?
+let favWord = "favourite";
+let favRegex = /favou?rite/gi; // Change this line
+let result = favRegex.test(favWord);
 console.log(result);
