@@ -257,6 +257,8 @@ let result = sample.match(countWhiteSpace); */
 // ?  checks for zero or one  element
 // (?=...) pattern that you want  want to be there
 // (?!...) pattern that you do not want to be there
+// () check for groups of characters /P(engu|umpk)in/g
+// \1  repeat; /(\w+)\s\1/ repeats first group 
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!// /1. ^ - start of input
 // 2. [a-z] - first character is a letter
@@ -273,13 +275,13 @@ let result = sample.match(countWhiteSpace); */
 /* let username = "c57bT3";
 let userCheck = /^[a-z][a-z]+\d*$|^[a-z]\d\d+$/gi; // Change this line
 let result = userCheck.test(username);
-console.log (result) */
+*/
 
 // {3,6} match a certain range of patterns  
 /* let ohStr = "Ohhh no";
 let ohRegex = /Oh{3,6}\sno/gi; // Change this line
 let result = ohRegex.test(ohStr);
-console.log(result); */
+*/
 
 // ?
 /* let favWord = "favourite";
@@ -290,11 +292,22 @@ let result = favRegex.test(favWord);
 //  looks for at least 3 letters  and at least one number
 /*  let password ="gfjskdmk"
  let check = /(?=[a-z]{3,})(?=\D*\d)/
- let correct = check.test(password);
- console.log(correct) */
+ let correct = check.test(password);*/
+
 
 //  greater than 5 characters long, and have two consecutive digits.
 /*  let sampleWord = "bana12";
  let pwRegex = /(?=\w{6})(?=\w*\d{2})/; // Change this line
- let result = pwRegex.test(sampleWord);
- console.log(result); */
+ let result = pwRegex.test(sampleWord);*/
+
+
+//  check for groups of characters (|)
+/* let myString = "Franklin D. Roosevelt";
+let myRegex = /(Eleanor|Franklin)\s.*Roosevelt/;
+let result = myRegex.test(myString); */
+
+//match a string that consists of only the same number repeated exactly three times separated by single spaces.
+let repeatNum = "42 42 42";
+let reRegex = /^(\d+)\s\1\s\1$/; // Change this line
+let result = reRegex.test(repeatNum);
+console.log(result);
