@@ -232,10 +232,16 @@ let result = calRegex.test(rickyAndCal); */
 let lastRegex = /caboose$/; // Change this line
 let result = lastRegex.test(caboose); */
 
+// \s match whitespace, tab, form feed, and new line characters.\\\\\\\\\\\\\\\\\\\\\\\\\\
+/* let sample = "Whitespace is important in separating words";
+let countWhiteSpace = /\s/g; // Change this line
+let result = sample.match(countWhiteSpace); */
 
-// *
+// \S non whitespace tab new line
+// \swhitespace tab new line
+// + look for one or more characters 
+// * look for zero or more character
 // . match any one character /hu./ (hug, huh, hun all true)
-// + find group of characters that appears one or more times in a row
 // | Or
 // /g[oeu]n/  find multiple possabilities of str
 // [a-z0-6] from to
@@ -243,11 +249,10 @@ let result = lastRegex.test(caboose); */
 // (^) find in the begnning
 // ($) - Find at the end of str
 // \w - find [A-Za-z0-9_]
-// \W. is= [^A-Za-z0-9_] Note, a capital letter.
-// \d find digits find numbers
-// \D find non-digits find numbers =[^0-9]
-// \s matches whitespace, tab, form feed, and new line characters.
-
+// \W. non [A-Za-z0-9_] = [^A-Za-z0-9_]
+// \d  numbers
+// \D  non-digits  =[^0-9]
+// {.,.} match a certain range of patterns  
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!// /1. ^ - start of input
 // 2. [a-z] - first character is a letter
@@ -260,13 +265,14 @@ let result = lastRegex.test(caboose); */
 // 9. [0-9]{2,0} - ends with two or more numbers
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!/
 
-
+// Example
 /* let username = "c57bT3";
 let userCheck = /^[a-z][a-z]+\d*$|^[a-z]\d\d+$/gi; // Change this line
 let result = userCheck.test(username);
 console.log (result) */
 
-// \s matches whitespace, tab, form feed, and new line characters.
-let sample = "Whitespace is important in separating words";
-let countWhiteSpace = /\s/g; // Change this line
-let result = sample.match(countWhiteSpace);
+// {3,6} match a certain range of patterns  
+let ohStr = "Ohhh no";
+let ohRegex = /Oh{3,6}\sno/gi; // Change this line
+let result = ohRegex.test(ohStr);
+console.log(result);
