@@ -237,7 +237,8 @@ let result = lastRegex.test(caboose); */
 let countWhiteSpace = /\s/g; // Change this line
 let result = sample.match(countWhiteSpace); */
 
-
+// i - ignore cases
+// g flag- search or extract a pattern more than once
 // * - Zero or more times
 // + - One or more times
 // ? - Zero or one times (optional)
