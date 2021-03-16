@@ -319,8 +319,16 @@ let reRegex = /^(\d+)\s\1\s\1$/; // Change this line
 let result = reRegex.test(repeatNum);
 console.log(result); */
 
+// replace()
+/* 
 let text = "one two three"
 let regexText = (/(\w+)\s(\w+)\s(\w+)/)
 let replaceText= "$2, $3, $1"
 let finalText = text.replace(regexText, replaceText);
-console.log(finalText)
+console.log(finalText) */
+
+// replace whitespace
+let text = "   hello world!    "
+let replaceText = /^\s+|\s+$/g
+let result = text.replace(replaceText, "");
+console.log(result);
