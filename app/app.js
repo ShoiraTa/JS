@@ -237,6 +237,15 @@ let result = lastRegex.test(caboose); */
 let countWhiteSpace = /\s/g; // Change this line
 let result = sample.match(countWhiteSpace); */
 
+
+// * - Zero or more times
+// + - One or more times
+// ? - Zero or one times (optional)
+// {n} - Exactly n times
+// {n,} - n or more times
+// {,m} - m or less times
+// {n,m} - At least n and at most m times
+
 // \S non whitespace tab new line
 // \swhitespace tab new line
 // + look for one or more characters 
@@ -250,10 +259,8 @@ let result = sample.match(countWhiteSpace); */
 // ($) - Find at the end of str
 // \w - find [A-Za-z0-9_]
 // \W. non [A-Za-z0-9_] = [^A-Za-z0-9_]
-// \d  numbers
+// /\d/ - A digit character ([0-9])
 // \D  non-digits  =[^0-9]
-// {.,.} match a certain range of patterns  
-// {2,} match 2 or more
 // ?  checks for zero or one  element
 // (?=...) pattern that you want  want to be there
 // (?!...) pattern that you do not want to be there
@@ -307,7 +314,13 @@ let myRegex = /(Eleanor|Franklin)\s.*Roosevelt/;
 let result = myRegex.test(myString); */
 
 //match a string that consists of only the same number repeated exactly three times separated by single spaces.
-let repeatNum = "42 42 42";
+/* let repeatNum = "42 42 42";
 let reRegex = /^(\d+)\s\1\s\1$/; // Change this line
 let result = reRegex.test(repeatNum);
-console.log(result);
+console.log(result); */
+
+let text = "one two three"
+let regexText = (/(\w+)\s(\w+)\s(\w+)/)
+let replaceText= "$2, $3, $1"
+let finalText = text.replace(regexText, replaceText);
+console.log(finalText)
