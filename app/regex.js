@@ -2,7 +2,7 @@
 // g flag- search or extract a pattern more than once
 // * - Zero or more times
 // + - One or more times
-// ? - Zero or one times (optional)
+// ? - Zero or one times (optional) ?=
 // {n} - Exactly n times
 // {n,} - n or more times
 // {,m} - m or less times
